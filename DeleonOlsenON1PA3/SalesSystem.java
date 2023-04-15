@@ -147,4 +147,30 @@ public class SalesSystem
     System.out.printf("%nExiting Sales System.%n");
   }
 }
+public void chooseQtr(int qtrCounter)
+{
+    switch (qtrCounter)
+    {
+        case 1:
+            System.out.println("Enter the sales revenue for the first quarter: ");
+            break;
+        case 2:
+            System.out.println("Enter the sales revenue for the second quarter: ");
+            break;
+        case 3:
+            System.out.println("Enter the sales revenue for the third quarter: ");
+            break;
+        case 4:
+            System.out.println("Enter the sales revenue for the fourth quarter: ");
+            break;
+    }
+}
+
+public static void main(String[] args)
+{
+    SalesSystem salesSystem = new SalesSystem();
+    salesSystem.start();
+}
+
+}
 
