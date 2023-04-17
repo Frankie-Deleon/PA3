@@ -14,33 +14,34 @@ package DeleonOlsenON1PA3;
  *
  * PROGRAM PURPOSE:  STUDENT INSERTS.
  */
-import java.util.Scanner;   //STUDENT INSERTS LINE COMMENTS FOR EACH IMPORT STMT.
-import java.util.Calendar;
+import java.util.Scanner;  // Importing the Scanner class from the java.util package for taking input from the user.
+import java.util.Calendar; //// Importing the Calendar class from the java.util package for working with dates and times.
 
 public class SalesReport
 {
   //STUDENT INSERTS LINE COMMENTS DESCRIPTIVE OF THE PURPOSE OF EACH VARIABLE.
-  private Scanner input = new Scanner(System.in);
-  private Calendar dateTime = Calendar.getInstance();
-  private String monthNo = "";
-  private String salesRep = "";
-  private String quarter = "";
+  private Scanner input = new Scanner(System.in); // SCANNER OBJECT TO TAKE INPUT FROM USER.
+  private Calendar dateTime = Calendar.getInstance(); // CALENDAR OBJECT TO WORK WITH DATES AND TIMES.
+  private String monthNo = ""; // STRING VARIABLE TO STORE THE NUMBER OF THE MONTH.
+  private String salesRep = ""; // STRING VARIABLE TO STORE THE NAME OF THE SALES REPRESENTATIVE.
+  private String quarter = ""; // STRING VARIABLE TO STORE THE QUARTER OF THE YEAR.
 
-  private double quarterlySales = 0.0;
-  private double salesRevenue = 0.0;
-  /* These static fields are data for
-   * the company and not just the salesRep which
-   * is why they're being treated as static, so all
-   * SalesReport objects can use them.*/
-  private static double annualSales = 0.0;
-  private static double projectedSales = 0.0;
-  private static double percOfTargetCo = 0.0;
-  private double percOfTargetRep = 0.0;
+  private double quarterlySales = 0.0; // DOUBLE VARIABLE TO STORE THE QUARTERLY SALES OF THE REPRESENTATIVE.
 
-  private int noOfQtrs = 0;
-  private int qtrChoice = 0;
-  private int noOfMonths = 3;
-  private static int noSalesReps = 0;
+  private double salesRevenue = 0.0; // DOUBLE VARIABLE TO STORE THE SALES REVENUE OF THE REPRESENTATIVE.
+  /* THESE STATIC FIELDS ARE DATA FOR
+    THE COMPANY AND NOT JUST THE SALESREP WHICH
+    IS WHY THEY'RE BEING TREATED AS STATIC, SO ALL
+    SALESREPORT OBJECTS CAN USE THEM.*/
+  private static double annualSales = 0.0; // STATIC VARIABLE TO STORE THE TOTAL ANNUAL SALES.
+  private static double projectedSales = 0.0; // STATIC VARIABLE TO STORE THE PROJECTED SALES FOR THE YEAR.
+  private static double percOfTargetCo = 0.0; // STATIC VARIABLE TO STORE THE PERCENTAGE OF TARGET SALES ACHIEVED BY THE COMPANY.
+  private double percOfTargetRep = 0.0; // INSTANCE VARIABLE TO STORE THE PERCENTAGE OF TARGET SALES ACHIEVED BY THE REPRESENTATIVE.
+
+  private int noOfQtrs = 0; // INSTANCE VARIABLE TO STORE THE NUMBER OF QUARTERS IN THE YEAR.
+  private int qtrChoice = 0; // INSTANCE VARIABLE TO STORE THE USER'S CHOICE OF QUARTER.
+  private int noOfMonths = 3; // INSTANCE VARIABLE TO STORE THE NUMBER OF MONTHS IN EACH QUARTER.
+  private static int noSalesReps = 0; // STATIC VARIABLE TO STORE THE NUMBER OF SALES REPRESENTATIVES IN THE COMPANY.
 
   private boolean repeat;
 
@@ -49,16 +50,16 @@ public class SalesReport
    * REQUIRES AN OBJECT TO CALL THEM IN THE CLIENT CLASS.*/
 
   /**
-   * STUDENT INSERTS DESCRIPTION OF WHAT'S GOING ON WITH THE CODE
-   * INSIDE THE METHOD.
+   THIS IS A CONSTRUCTOR METHOD FOR THE SALESREPORT CLASS. IT DOES NOT HAVE A RETURN TYPE AND IS USED TO
+INITIALIZE THE OBJECT WHEN IT IS CREATED.
+  
    */
   public SalesReport()
   {
   }//END Default Constructor
 
   /**
-   * STUDENT INSERTS DESCRIPTION OF WHAT'S GOING ON WITH THE CODE
-   * INSIDE THE METHOD.
+   The public keyword indicates that this constructor can be accessed from outside the class.
    */
   //CODE THE CONSTRUCTOR'S HEADER BASED ON THE CLOSE BRACE LINE COMMENT.
   {
@@ -68,8 +69,10 @@ public class SalesReport
   }//END Constructor(noOfQtrs:  int, salesRep:  String, quarterlySales:  double)
 
   /**
-   * STUDENT INSERTS DESCRIPTION OF WHAT'S GOING ON WITH THE CODE
-   * INSIDE THE METHOD.
+   THE SETNOQTRS(INT) METHOD IS USED TO SET THE NUMBER OF QUARTERS IN THE YEAR.
+   THE SETSALESREP(STRING) METHOD IS USED TO SET THE
+   NAME OF THE SALES REPRESENTATIVE. THE SETQUARTERLYSALES(DOUBLE) METHOD IS USED TO SET THE
+   QUARTERLY SALES FOR THE SALES REPRESENTATIVE.
    */
   public SalesReport copy()
   {
